@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
+/*importing so we can use different font styles*/
+
+*{
+    box-sizing: border-box;/*200px including padding(without this is 200+padding)*/
+    font-family: Raleway;
+    color: #779;
+}
+
+html,body {  /*styling for the whole page(whole page body)*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column; /*solution for footer, footer stays at the bottom of the page*/
+}
+
+/*from here styling HOME PAGE-main nav element*/
+
+.nav ul{
+    margin: 0;
+}
+
+.nav li {
+    display: inline; /*objects next to each other instead of one under the other*/
+}
+
+.nav a{
+    display: inline-block; /*same as inline but can add padding-top*/
+    padding: 0.5em;
+    color: white;
+    text-decoration: none; /*to remove dots from links*/
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, 0.3);  
+}
+
+.main-nav {  
+    text-align: center; /*text in the middle of the screen*/
+    font-size: 1.1em;
+    font-weight: lighter; /*making text a little bit thinner*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);/*line under navigation*/
+}
+
+.main-nav li{
+    padding: 0 5%;
+}
+
+/*from here styling main header element*/
+
+.main-header{
+    background-color: rgba(0, 0, 0, .8);
+    background-image: url("images/store.jpeg");
+    background-blend-mode: multiply;   /*merging both backround img and background color*/
+    background-size: cover; /*1 image covering whole page*/
+    padding-bottom: 30px;
+}
+
+/*from here styling title in the header + some styles for later titles*/
+
+.page-title{
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Impact";  /*random font style*/
+    font-weight: normal;
+    color: rgb(202, 202, 202);
+}
+
+.page-title-larger{
+    font-size: 6em;
+}
+
+/*from here styling body of the element*/
+
+.content-section{
+    margin: 1em;
+}
+
+.container{
+    max-width: 900px; /*text cant spread beyond 900px*/
+    margin: 0 auto; /*text always centered*/
+    padding: 0 1.5em;/*moving content from the edges of the page*/
+}
+
+.section-header{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    font-size: 3em;
+}
+
+.content-img{
+    float: left; /*using float to set picture left of the text content*/
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%; /*styling picture*/
+    border: 8px outset rgb(255, 255, 255);
+}
+
+/*from here styling footer of the page*/
+
+.main-footer{
+    background-color: #374b51;
+    color: white;
+    padding: 0.25em 0;
+    margin-top: auto; /*footer at the bottom of the page + flex-direction in html selector*/
+}
+
+.main-footer-container{
+    display: flex;
+
+    align-items: center;
+}
+
+.main-footer-container ul{
+    flex-grow: 1; /*spreading as much as possible*/
+    text-align: end; /*text on the right side*/
+    
+}
+
+.footer-nav li{
+    padding: 0 .5em;
+}
+
+.footer-nav img{
+    width: 40px;
+    height: 40px;
+}
+
+/*from here styling SHOP PAGE-using mostly same styles as HOME PAGE
+  stying shop items*/
+
+.shop-item{
+    margin: 30px;
+}
+
+.shop-item-title{  /*styling div for products(text,pictures and numbers)*/
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.shop-item-image{
+    height: 150px;
+}
+
+.shop-item-details{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price{
+    flex-grow: 1;
+    color: black;
+    font-size: 1.5em;
+}
+
+.shop-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*from here buttons styling*/
+
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer; /*changing cursor when pointing on the button*/
+}
+
+.btn-primary {
+    color: white;
+    background-color: rgba(5, 130, 175, 0.6);
+    border: none;
+    border-radius: .4em;
+    font-weight: bold;
+}
+
+.btn-primary:hover{
+    background-color: rgba(66, 185, 228, 1);
+    border: 1px solid black;
+}
+
+/*from here cart section styling*/
+
+.cart-header{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+}
+
+.cart-title{
+    border-bottom: 2px solid black;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 2em ;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row{
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price{
+    width: 20%;
+    font-size: 1.3em;
+    color: black;
+}
+
+.cart-quantity{
+    width: 35%;
+}
+
+.cart-item-title{
+    color: black;
+    margin-left: 0.5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image{
+    width: 75px;
+    height: auto;
+}
+
+/*from here finishing buttons on cart + footer*/
+
+.btn-cart{
+    color: white;
+    background-color: rgba(193, 7, 7, 0.75);
+    border: none;
+    border-radius: 0.5em;
+    font-weight: bold;
+}
+
+.btn-cart:hover{
+    background-color:  rgba(193, 7, 7, 1);
+}
+
+.cart-quantity-input{
+    height: 34px;
+    width: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #eee;
+    color: black;
+    padding: 0;
+    text-align: center;
+    font-size: 1.3em;
+    margin-right: 15px;
+}
+
+.cart-row:last-child{           /*last child to put a solid line over the end of the list*/
+    border-bottom: 2px solid black;
+}
+
+.cart-row:last-child .cart-column{ /* last child to remove other lines that we had*/
+    border: none;
+}
+
+.cart-total{
+    text-align: end;
+    margin-top: 10px; /*total prices for products*/
+    margin-right: 10px;
+}
+
+.cart-total-title{
+    font-weight: bold;
+    font-size: 1.5em; /*stylig of word Total*/
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price{
+    color: black;
+    font-size: 1.3em; /*styling numbers*/
+}
+
+.btn-purchase{
+    display: block;
+    margin: 40px auto 80px auto; /*final button on the page*/
+    font-size: 1.75em;
+}
+
+/*same footer as for HOME PAGE*/
